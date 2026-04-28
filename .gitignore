@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+functions/node_modules/
+
+# Environment
+.env
+.env.local
+
+# Firebase
+firebase-debug.log
+firebase-debug.*.log
+.firebase/
+.runtimeconfig.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Debug
+*.log

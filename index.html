@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VoteGuide AI — India's Smart Election Education & Secure Voting Platform. Enterprise-grade security with AES-256 encryption, blockchain ledger, and anonymous voting.">
+  <meta name="keywords" content="India elections, voter registration, election education, secure voting, blockchain voting, NVSP, ECI, voter guide, EVM, VVPAT, voting process India">
+  <meta name="author" content="VoteGuide AI">
+  <meta name="theme-color" content="#0a1628">
+
+  <!-- Security Headers via Meta Tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com https://translate-pa.googleapis.com https://www.gstatic.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://translate.googleapis.com https://fonts.googleapis.com https://www.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.cloudfunctions.net wss://*.firebaseio.com https://firestore.googleapis.com https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com; frame-src https://translate.google.com https://*.firebaseapp.com;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>VoteGuide AI — India's Secure Election & Voting Platform</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🗳️</text></svg>">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Google Translate -->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#app" class="skip-link">Skip to main content</a>
+
+  <!-- Tricolor Bar -->
+  <div class="tricolor-bar-animated"></div>
+
+  <!-- Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#/" class="nav-logo">
+        <div class="nav-logo-icon">🗳️</div>
+        <div class="nav-logo-text">Vote<span>Guide</span> AI</div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links-wrapper">
+        <!-- Drawer Header: Profile / Sign In -->
+        <div class="mobile-drawer-header" id="mobile-drawer-header">
+          <div class="drawer-top-bar">
+            <div class="drawer-brand">
+              <div class="nav-logo-icon">🗳️</div>
+              <span>VoteGuide AI</span>
+            </div>
+            <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">✕</button>
+          </div>
+          <div id="mobile-auth-container"></div>
+        </div>
+
+        <div class="nav-links">
+          <!-- Primary Tool Links -->
+          <a href="#/" class="nav-link active"><span class="nav-link-icon">🏠</span> Home</a>
+          <a href="#/ai-assistant" class="nav-link"><span class="nav-link-icon">🤖</span> AI Assistant</a>
+          <a href="#/eci-map" class="nav-link"><span class="nav-link-icon">🗺️</span> ECI Map</a>
+          <a href="#/quiz" class="nav-link"><span class="nav-link-icon">🧠</span> Quiz</a>
+          <a href="#/translate" class="nav-link"><span class="nav-link-icon">🌐</span> Translate</a>
+          <a href="#/vote" class="nav-link nav-link-vote"><span class="nav-link-icon">🗳️</span> Vote Now</a>
+
+          <!-- Learn Dropdown -->
+          <div class="nav-dropdown" id="dropdown-learn">
+            <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+              <span class="nav-link-icon">📖</span> Learn
+              <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <div class="nav-dropdown-header">📖 Learn About Elections</div>
+              <a href="#/registration" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">📝</span><div><strong>Registration</strong><span class="nav-dropdown-item-desc">Voter ID & registration guide</span></div></a>
+              <a href="#/how-to-vote" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">📋</span><div><strong>How to Vote</strong><span class="nav-dropdown-item-desc">Step-by-step voting guide</span></div></a>
+              <a href="#/election-dates" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">📅</span><div><strong>Election Dates</strong><span class="nav-dropdown-item-desc">Upcoming schedules & timelines</span></div></a>
+              <a href="#/parliament" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">🏛️</span><div><strong>Parliament</strong><span class="nav-dropdown-item-desc">Lok Sabha & Rajya Sabha</span></div></a>
+              <a href="#/states" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">🗺️</span><div><strong>States & UTs</strong><span class="nav-dropdown-item-desc">All 28 states & 8 territories</span></div></a>
+              <a href="#/president" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">⚖️</span><div><strong>President</strong><span class="nav-dropdown-item-desc">Role, powers & election</span></div></a>
+              <a href="#/first-time-voter" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">🌟</span><div><strong>First-Time Voter</strong><span class="nav-dropdown-item-desc">Your first vote roadmap</span></div></a>
+              <a href="#/myths" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">💡</span><div><strong>Myths vs Facts</strong><span class="nav-dropdown-item-desc">Common misconceptions busted</span></div></a>
+            </div>
+          </div>
+
+          <!-- Resources Dropdown -->
+          <div class="nav-dropdown" id="dropdown-resources">
+            <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+              <span class="nav-link-icon">🏛️</span> Citizen Corner
+              <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <div class="nav-dropdown-header">🏛️ Citizen Corner</div>
+              <a href="#/updates" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">📢</span><div><strong>Updates</strong><span class="nav-dropdown-item-desc">Latest election news</span></div></a>
+              <a href="#/official-links" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">🔗</span><div><strong>Official Links</strong><span class="nav-dropdown-item-desc">Govt. portals & websites</span></div></a>
+              <a href="#/evm-demo" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">🗳️</span><div><strong>EVM Demo</strong><span class="nav-dropdown-item-desc">Interactive voting machine</span></div></a>
+              <a href="#/booth-finder" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">📍</span><div><strong>Booth Finder</strong><span class="nav-dropdown-item-desc">Find your polling station</span></div></a>
+            </div>
+          </div>
+
+          <!-- Security Dropdown -->
+          <div class="nav-dropdown" id="dropdown-security">
+            <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+              <span class="nav-link-icon">🔒</span> Security
+              <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <div class="nav-dropdown-header">🔒 Security & Voting</div>
+              <a href="#/verify-identity" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">🪪</span><div><strong>Verify Identity</strong><span class="nav-dropdown-item-desc">Government ID verification</span></div></a>
+              <a href="#/mfa-setup" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">🔐</span><div><strong>MFA Setup</strong><span class="nav-dropdown-item-desc">Multi-factor authentication</span></div></a>
+              <a href="#/vote-receipt" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">🧾</span><div><strong>Vote Receipt</strong><span class="nav-dropdown-item-desc">Verify your vote on blockchain</span></div></a>
+              <a href="#/security-dashboard" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">🛡️</span><div><strong>Security Dashboard</strong><span class="nav-dropdown-item-desc">Audit logs & monitoring</span></div></a>
+              <a href="#/admin" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-icon">⚙️</span><div><strong>Admin Panel</strong><span class="nav-dropdown-item-desc">Election management</span></div></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drawer Footer: Logout -->
+        <div class="mobile-drawer-footer" id="mobile-drawer-footer">
+          <div id="mobile-logout-container"></div>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <!-- Translate Website -->
+        <button class="nav-utility-btn" id="translate-site-btn" title="Translate website" aria-label="Translate website">
+          <span class="nav-utility-icon">🌐</span>
+        </button>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button class="nav-utility-btn" id="theme-toggle-btn" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">
+          <span class="theme-icon-sun" id="theme-icon-sun">☀️</span>
+          <span class="theme-icon-moon" id="theme-icon-moon">🌙</span>
+        </button>
+
+        <div id="auth-container">
+          <button class="sign-in-btn" id="sign-in-btn">
+            <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
+            Sign In
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content" id="app" role="main">
+    <!-- Pages rendered here by router -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <div class="nav-logo-icon">🗳️</div>
+            <span>VoteGuide AI</span>
+          </div>
+          <p class="footer-desc">India's AI-powered election education platform. Empowering citizens with knowledge about the democratic process, voter registration, and electoral awareness.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="#/how-to-vote">How to Vote</a>
+          <a href="#/registration">Registration</a>
+          <a href="#/parliament">Parliament</a>
+          <a href="#/president">President</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="#/ai-assistant">AI Assistant</a>
+          <a href="#/quiz">Quiz</a>
+          <a href="#/translate">Translate</a>
+          <a href="#/evm-demo">EVM Demo</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#/official-links">Official Links</a>
+          <a href="#/booth-finder">Booth Finder</a>
+          <a href="#/myths">Myths vs Facts</a>
+          <a href="#/updates">Updates</a>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        ⚠️ <strong>Disclaimer:</strong> VoteGuide AI is an educational platform. It is strictly apolitical and does not endorse any political party or candidate. All information is sourced from official Election Commission of India resources. For official services, visit <a href="https://eci.gov.in" target="_blank" style="color:var(--saffron-400)">eci.gov.in</a>.
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 VoteGuide AI — Built for Hack2Skill PromptWars Challenge</span>
+        <span>Made with 🧡 for Indian Democracy</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Hidden Google Translate Widget -->
+  <div id="google_translate_element" style="position:fixed;top:70px;right:16px;z-index:999;display:none"></div>
+
+  <script>
+    function googleTranslateInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,mr,ta,te,bn,gu,kn,ml,pa,ur,or',
+        layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+
+  <!-- App Script -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

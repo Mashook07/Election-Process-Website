@@ -1,0 +1,574 @@
+/* ============================================
+   VoteGuide AI — Design Tokens
+   Deep Navy + Saffron + Emerald + White
+   Government-grade premium design system
+   ============================================ */
+
+:root {
+  /* ── Primary Palette ── */
+  --navy-900: #060e1a;
+  --navy-800: #0a1628;
+  --navy-700: #0f1f38;
+  --navy-600: #1a2744;
+  --navy-500: #1e3a5f;
+  --navy-400: #2a4a72;
+  --navy-300: #3d6291;
+  --navy-200: #5a82b0;
+  --navy-100: #8ba8cc;
+  --navy-50: #c5d5e8;
+
+  /* ── Saffron Accent ── */
+  --saffron-600: #e07a00;
+  --saffron-500: #FF9933;
+  --saffron-400: #ffad5c;
+  --saffron-300: #ffc285;
+  --saffron-200: #ffd6ad;
+  --saffron-100: #fff0e0;
+  --saffron-glow: rgba(255, 153, 51, 0.15);
+
+  /* ── Emerald Green ── */
+  --emerald-700: #0a5c12;
+  --emerald-600: #138808;
+  --emerald-500: #1aa310;
+  --emerald-400: #2ebd24;
+  --emerald-300: #5dd355;
+  --emerald-200: #96e490;
+  --emerald-100: #d4f5d1;
+  --emerald-glow: rgba(19, 136, 8, 0.15);
+
+  /* ── Ashoka Blue ── */
+  --ashoka-blue: #000080;
+  --ashoka-light: #1a1a99;
+
+  /* ── Neutral / Surface ── */
+  --white: #ffffff;
+  --gray-50: #f1f5f9;
+  --gray-100: #e2e8f0;
+  --gray-200: #cbd5e1;
+  --gray-300: #cdd2d9;
+  --gray-400: #9da5b1;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* ── Semantic Colors ── */
+  --success: #138808;
+  --warning: #FF9933;
+  --error: #dc2626;
+  --info: #2563eb;
+
+  /* ── Gradients ── */
+  --gradient-hero: linear-gradient(135deg, #0a1628 0%, #1a2744 40%, #1e3a5f 100%);
+  --gradient-hero-overlay: linear-gradient(180deg, rgba(10, 22, 40, 0.3) 0%, rgba(10, 22, 40, 0.95) 100%);
+  --gradient-saffron: linear-gradient(135deg, #FF9933 0%, #e07a00 100%);
+  --gradient-emerald: linear-gradient(135deg, #138808 0%, #1aa310 100%);
+  --gradient-card: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  --gradient-tricolor: linear-gradient(180deg, #FF9933 0%, #FFFFFF 50%, #138808 100%);
+  --gradient-nav: linear-gradient(180deg, #060e1a 0%, rgba(6, 14, 26, 0.95) 100%);
+
+  /* ── Typography ── */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.05em;
+
+  /* ── Spacing ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ── Border Radius ── */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-glow-saffron: 0 0 20px rgba(255, 153, 51, 0.3);
+  --shadow-glow-emerald: 0 0 20px rgba(19, 136, 8, 0.3);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-nav: 0 4px 30px rgba(0, 0, 0, 0.15);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-Index Scale ── */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-nav: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+  --z-tooltip: 700;
+
+  /* ── Breakpoints (for reference) ── */
+  /* Mobile: < 640px */
+  /* Tablet: 640px - 1024px */
+  /* Desktop: > 1024px */
+  /* Wide: > 1280px */
+
+  /* ── Container ── */
+  --container-max: 1280px;
+  --container-narrow: 960px;
+  --container-wide: 1440px;
+  --nav-height: 64px;
+}
+
+/* ── Dark Mode Theme ── */
+[data-theme="dark"] {
+  /* Surface colors */
+  --gray-50: #0d1520;
+  --gray-100: #111b2b;
+  --gray-200: #1a2744;
+  --gray-300: #2a3a55;
+  --gray-400: #8a9bba;
+  --gray-500: #b0bfd6;
+  --gray-600: #d0d9e8;
+  --gray-700: #e8edf5;
+  --gray-800: #f5f7fa;
+  --gray-900: #ffffff;
+
+  /* Override whites for cards/surfaces */
+  --white: #0f1a2c;
+
+  /* Heading colors */
+  --navy-800: #f5f7fa;
+  --navy-700: #e8edf5;
+  --navy-500: var(--saffron-400);
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.3);
+
+  /* Scrollbar */
+  color-scheme: dark;
+}
+
+/* Dark mode body & content overrides */
+[data-theme="dark"] body {
+  background-color: #0a1222;
+  color: #e8edf5;
+}
+
+/* Cards & containers */
+[data-theme="dark"] .card,
+[data-theme="dark"] .quiz-card,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .step-card,
+[data-theme="dark"] .myth-card,
+[data-theme="dark"] .why-vote-card,
+[data-theme="dark"] .achievement-badge,
+[data-theme="dark"] .accordion-item,
+[data-theme="dark"] .modal,
+[data-theme="dark"] .toast {
+  background: #0f1a2c !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #e8edf5;
+}
+
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .step-card:hover,
+[data-theme="dark"] .why-vote-card:hover {
+  border-color: rgba(255, 153, 51, 0.3) !important;
+}
+
+/* Page sections */
+[data-theme="dark"] .page-section {
+  background: transparent;
+}
+
+[data-theme="dark"] .why-vote {
+  background: #0a1222 !important;
+}
+
+/* Forms */
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-textarea,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: #111b2b !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #e8edf5 !important;
+}
+
+[data-theme="dark"] .form-input::placeholder,
+[data-theme="dark"] input::placeholder {
+  color: #6b7fa0 !important;
+}
+
+/* Data tables */
+[data-theme="dark"] .data-table-wrapper {
+  background: #0f1a2c;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .data-table th {
+  background: #0a1222;
+  color: #d0d9e8;
+}
+
+[data-theme="dark"] .data-table td {
+  border-color: rgba(255, 255, 255, 0.06);
+  color: #e8edf5;
+}
+
+[data-theme="dark"] .data-table tr:hover td {
+  background: rgba(255, 153, 51, 0.05);
+}
+
+/* Section headers */
+[data-theme="dark"] .section-title { color: #ffffff; }
+[data-theme="dark"] .section-subtitle { color: #c5d1e5; }
+[data-theme="dark"] .section-badge {
+  color: var(--saffron-400);
+  background: rgba(255, 153, 51, 0.1);
+  border-color: rgba(255, 153, 51, 0.2);
+}
+
+/* Myth vs Fact */
+[data-theme="dark"] .myth-header {
+  background: rgba(220, 38, 38, 0.08);
+  border-color: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .fact-section {
+  background: rgba(19, 136, 8, 0.08);
+}
+
+[data-theme="dark"] .myth-header span,
+[data-theme="dark"] .fact-section p {
+  color: #e8edf5 !important;
+}
+
+/* EVM Demo */
+[data-theme="dark"] .evm-machine {
+  background: #111b2b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .evm-candidate {
+  background: #0f1a2c !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-theme="dark"] .evm-ballot {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .evm-vvpat {
+  background: #0a1222 !important;
+}
+
+[data-theme="dark"] .vvpat-slip {
+  background: #0f1a2c !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Quiz */
+[data-theme="dark"] .quiz-question { color: #ffffff; }
+
+[data-theme="dark"] .quiz-option {
+  color: #e8edf5;
+  border-color: rgba(255, 255, 255, 0.1);
+  background: #111b2b;
+}
+
+[data-theme="dark"] .quiz-explanation {
+  background: #111b2b;
+  color: #d0d9e8;
+}
+
+[data-theme="dark"] .quiz-option-letter {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e8edf5;
+}
+
+/* Translate */
+[data-theme="dark"] .translate-box {
+  background: #0f1a2c !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .translate-box textarea {
+  background: transparent !important;
+  color: #e8edf5 !important;
+}
+
+[data-theme="dark"] .translate-box-header {
+  background: #0a1222 !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  color: #e8edf5;
+}
+
+/* FTV timeline */
+[data-theme="dark"] .ftv-step-content {
+  background: #0f1a2c;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .ftv-step-dot {
+  box-shadow: 0 0 0 4px #0a1222, var(--shadow-glow-saffron);
+}
+
+/* Badges */
+[data-theme="dark"] .badge {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .badge-navy {
+  background: rgba(255, 255, 255, 0.06);
+  color: #b0bfd6;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Chips */
+[data-theme="dark"] .chip {
+  background: rgba(255, 255, 255, 0.06);
+  color: #d0d9e8;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .chip.active {
+  background: rgba(255, 153, 51, 0.15);
+  color: var(--saffron-400);
+  border-color: var(--saffron-500);
+}
+
+/* Tabs */
+[data-theme="dark"] .tabs {
+  background: #111b2b;
+}
+
+[data-theme="dark"] .tab {
+  color: #b0bfd6;
+}
+
+[data-theme="dark"] .tab.active {
+  background: #0f1a2c;
+  color: #ffffff;
+}
+
+/* Buttons */
+[data-theme="dark"] .btn-outline {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e8edf5;
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .btn-ghost {
+  color: #d0d9e8;
+}
+
+[data-theme="dark"] .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+/* Footer */
+[data-theme="dark"] .site-footer {
+  background: #060e1a;
+  border-color: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .footer-disclaimer {
+  background: rgba(255, 153, 51, 0.06);
+  border-color: rgba(255, 153, 51, 0.12);
+}
+
+/* Leaderboard */
+[data-theme="dark"] .leaderboard-item {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .leaderboard-rank {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e8edf5;
+}
+
+/* Progress bar */
+[data-theme="dark"] .progress-bar {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #111b2b;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #2a3a55;
+}
+
+/* Map */
+[data-theme="dark"] .map-container {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── GLOBAL TEXT OVERRIDES ── */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] p {
+  color: #d0d9e8 !important;
+}
+
+[data-theme="dark"] strong {
+  color: #f5f7fa;
+}
+
+[data-theme="dark"] label,
+[data-theme="dark"] .form-label {
+  color: #e8edf5;
+}
+
+[data-theme="dark"] .nav-logo-text,
+[data-theme="dark"] .user-name {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .chat-bubble-content,
+[data-theme="dark"] .chat-input-v2,
+[data-theme="dark"] .chat-box-header strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .eci-black-text {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .eci-tag-badge {
+  color: #86efac !important;
+  background: rgba(34, 197, 94, 0.15) !important;
+}
+
+[data-theme="dark"] a {
+  color: var(--saffron-400);
+}
+
+[data-theme="dark"] li {
+  color: #e8edf5 !important;
+}
+
+[data-theme="dark"] small {
+  color: #b0bfd6 !important;
+}
+
+[data-theme="dark"] .stat-number {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .stat-label {
+  color: #b0bfd6;
+}
+
+[data-theme="dark"] .accordion-header {
+  color: #f5f7fa;
+}
+
+[data-theme="dark"] .accordion-content-inner {
+  color: #d0d9e8;
+}
+
+[data-theme="dark"] .toast-message {
+  color: #e8edf5;
+}
+
+[data-theme="dark"] .achievement-badge .badge-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .achievement-badge .badge-desc {
+  color: #b0bfd6;
+}
+
+[data-theme="dark"] .step-card h4 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .vvpat-slip-name {
+  color: #ffffff !important;
+}
+
+/* Nav links in dark mode - keep white */
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .nav-dropdown-trigger {
+  color: var(--gray-400);
+}
+
+/* Force white text on all colored/gradient buttons */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-secondary,
+[data-theme="dark"] .btn-emerald,
+[data-theme="dark"] .chat-send-v2,
+[data-theme="dark"] .evm-vote-btn,
+[data-theme="dark"] .sign-in-btn,
+[data-theme="dark"] .hero-badge,
+[data-theme="dark"] .step-number,
+[data-theme="dark"] .data-table th {
+  color: #ffffff !important;
+}
