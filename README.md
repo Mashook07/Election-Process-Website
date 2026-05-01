@@ -189,3 +189,5 @@ Contributions are welcome! Please open an issue or submit a pull request.
   Built with ❤️ for Indian Democracy<br>
   <strong>VoteGuide AI</strong> — Empowering Every Citizen
 </p>
+
+<!-- Last updated: May 2026 -->
