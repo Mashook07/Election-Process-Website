@@ -3,8 +3,11 @@
 ![Firebase](https://img.shields.io/badge/Firebase-Deployed-orange?logo=firebase)
 ![Security](https://img.shields.io/badge/Security-Enterprise%20Grade-green?logo=shield)
 ![License](https://img.shields.io/badge/License-MIT-blue)
+![Version](https://img.shields.io/badge/Version-1.0.1-purple)
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?logo=github)
+![Made for India](https://img.shields.io/badge/Made%20for-India%20🇮🇳-FF9933)
 
-> An AI-powered election education platform with **enterprise-grade security** for secure online voting. Built with vanilla JavaScript, Firebase, and Web Crypto API.
+> An AI-powered election education platform with **enterprise-grade security** for secure online voting. Built with vanilla JavaScript, Firebase, and Web Crypto API. Designed to empower every Indian citizen with transparent, tamper-proof digital democracy.
 
 🌐 **Live Demo:** [https://election-process-2026.web.app](https://election-process-2026.web.app)
 
@@ -181,7 +184,20 @@ This project is open source under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request.
+Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) guide before submitting a pull request.
+
+- 🐛 **Found a bug?** Open an [issue](https://github.com/Mashook07/Election-Process-Website/issues)
+- 💡 **Have a feature idea?** Open a [discussion](https://github.com/Mashook07/Election-Process-Website/discussions)
+- 🔐 **Security concern?** See [SECURITY.md](SECURITY.md)
+
+---
+
+## ⚡ Performance Tips
+
+- Enable browser caching via `firebase.json` cache headers
+- Lazy-load non-critical JS modules using dynamic `import()`
+- Use `preconnect` hints for Firebase and Google Fonts
+- Minimize re-renders by caching DOM references in page modules
 
 ---
 
@@ -190,4 +206,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
   <strong>VoteGuide AI</strong> — Empowering Every Citizen
 </p>
 
-<!-- Last updated: May 2026 -->
+<!-- Last updated: May 2026 | v1.0.1 -->
