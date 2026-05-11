@@ -16,7 +16,8 @@ export function showToast(message, type = 'info') {
   toast.className = `toast toast-${type}`;
   toast.innerHTML = `<span class="toast-icon">${icons[type]}</span><span class="toast-message">${message}</span>`;
   container.appendChild(toast);
-  setTimeout(() => toast.remove(), 3000);
+  const duration = type === 'error' ? 5000 : type === 'warning' ? 4000 : 3000;
+  setTimeout(() => toast.remove(), duration);
 }
 
 // Animate number counting up
@@ -91,6 +92,17 @@ export function formatDate(dateStr) {
   return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
+// Format time (HH:MM AM/PM)
+export function formatTime(dateStr) {
+  const d = new Date(dateStr);
+  return d.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true });
+}
+
+// Format date and time together
+export function formatDateTime(dateStr) {
+  return `${formatDate(dateStr)}, ${formatTime(dateStr)}`;
+}
+
 // Enhanced HTML Sanitization (prevents XSS)
 // Strips dangerous tags, encodes entities, and removes event handlers
 const DANGEROUS_PATTERNS = /(<script[\s>]|<\/script>|<iframe[\s>]|<\/iframe>|<object[\s>]|<embed[\s>]|javascript:|vbscript:|on\w+\s*=)/gi;
@@ -142,4 +154,29 @@ export function formatAIResponse(text) {
     .replace(/\n- /g, '<br>• ')
     .replace(/\n(\d+)\. /g, '<br>$1. ')
     .replace(/\n/g, '<br>');
+}
+
+// Copy text to clipboard with fallback
+export async function copyToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    // Fallback for older browsers
+    const el = document.createElement('textarea');
+    el.value = text;
+    el.style.position = 'fixed';
+    el.style.opacity = '0';
+    document.body.appendChild(el);
+    el.select();
+    const success = document.execCommand('copy');
+    document.body.removeChild(el);
+    return success;
+  }
+}
+
+// Truncate long strings with ellipsis
+export function truncate(str, maxLength = 80) {
+  if (typeof str !== 'string') return '';
+  return str.length > maxLength ? str.slice(0, maxLength - 3) + '...' : str;
 }
